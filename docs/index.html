@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="desription" content="A collection of afterimage effects in CSS animation">
+  <meta name="keywords" content="afterimage,animation,collection,css,cssnext,zann">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta property="og:description" content="A collection of afterimage effects in CSS animation">
+  <meta property="og:title" content="ZANN">
+  <title>ZANN</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Ranga|Roboto">
+  <link rel="stylesheet" href="./flow.css">
+  <link rel="stylesheet" href="./zann.css">
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    header h3 {
+      font-family: 'Ranga';
+    }
+
+    header,
+    main {
+      max-width: 1024px;
+      min-width: 480px;
+    }
+
+    main input,
+    main select,
+    .zann {
+      font-family: 'Oswald';
+    }
+
+    .zann {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 1em 1.618em;
+    }
+  </style>
+</head>
+
+<body class="text--center">
+  <header class="container">
+    <h1 class="zann" :class="response"><b>ZANN</b></h1>
+    <h3>A collection of afterimage effects in CSS animation</h3>
+    <nav>
+      <a class="github-button" href="https://github.com/AI428/zann.css" data-icon="octicon-star" aria-label="Star AI428/zann.css on GitHub">Star</a>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </nav>
+  </header>
+  <hr>
+  <main class="container">
+    <section>
+      <select v-model="classed">
+        <option v-for="value in classList" :value="value">Class is {{ value }}</option>
+      </select>
+      <input class="box--emboss button" type="button" value="On" @click="run('on')">
+      <input type="button" value="Off" @click="run('off')">
+    </section>
+  </main>
+  <footer>
+    <p>View <strong>ZANN</strong> on <mark><code><a href="https://github.com/AI428/zann.css">GitHub</a></code></mark></p>
+    <p><small>Free to use under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license</small></p>
+  </footer>
+  <script src="https://unpkg.com/vue"></script>
+  <script>
+    var header = new Vue({
+      el: 'header',
+      data: {
+        response: ''
+      }
+    });
+
+    var main = new Vue({
+      el: 'main',
+      data: {
+        classed: 'zann-closet',
+        classList: [
+          'zann-closet',
+          'zann-edge',
+          'zann-ripple',
+          'zann-ripple-back',
+          'zann-scan',
+          'zann-scramble',
+          'zann-slide',
+          'zann-slide-back',
+          'zann-wipe'
+        ]
+      },
+      methods: {
+        run: function(mode) {
+          header.response = this.classed + '--' + mode;
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

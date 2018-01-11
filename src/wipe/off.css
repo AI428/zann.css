@@ -1,0 +1,77 @@
+.zann-wipe--off {
+  & {
+    animation-name: ZANNWipeOff;
+  }
+  &>:not(.zann) {
+    animation-name: ZANNWipeChildOff;
+  }
+  /** prior */
+  &::after {
+    animation-name: ZANNWipeRightOff;
+  }
+  &::before {
+    animation-name: ZANNWipeLeftOff;
+  }
+}
+
+@keyframes ZANNWipeOff {
+  100% {
+    @apply --theme-skeleton;
+  }
+}
+
+@keyframes ZANNWipeChildOff {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ZANNWipeLeftOff {
+  20%, 80% {
+    background: var(--light);
+  }
+  /**/
+  0%, 80% {
+    bottom: 0;
+    top: 0;
+  }
+  /**/
+  0% {
+    left: 50%;
+  }
+  60%, 80% {
+    left: 0;
+  }
+  /**/
+  0%, 50% {
+    right: 50%;
+  }
+  80% {
+    right: 100%;
+  }
+}
+
+@keyframes ZANNWipeRightOff {
+  20%, 80% {
+    background: var(--light);
+  }
+  /**/
+  0%, 80% {
+    bottom: 0;
+    top: 0;
+  }
+  /**/
+  0%, 50% {
+    left: 50%;
+  }
+  80% {
+    left: 100%;
+  }
+  /**/
+  0% {
+    right: 50%;
+  }
+  60%, 80% {
+    right: 0;
+  }
+}

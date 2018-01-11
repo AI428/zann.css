@@ -1,0 +1,12 @@
+.zann-slide-back--on {
+  animation-name: ZANNSlideBackOn;
+}
+
+@keyframes ZANNSlideBackOn {
+  0%, 50% {
+    opacity: 0;
+  }
+  0% {
+    transform: translate3d(55%, 0, 0);
+  }
+}

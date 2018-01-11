@@ -1,0 +1,106 @@
+.zann-closet--on {
+  & {
+    animation-name: ZANNClosetOn;
+  }
+  &>:not(.zann) {
+    animation-name: ZANNClosetChildOn;
+  }
+  /** prior */
+  &::after {
+    animation-name: ZANNClosetRightOn;
+  }
+  &::before {
+    animation-name: ZANNClosetLeftOn;
+  }
+}
+
+@keyframes ZANNClosetOn {
+  0%, 80% {
+    @apply --theme-skeleton;
+  }
+}
+
+@keyframes ZANNClosetChildOn {
+  0%, 80% {
+    opacity: 0;
+  }
+}
+
+@keyframes ZANNClosetLeftOn {
+  0%, 59% {
+    background-image: linear-gradient(-90deg, var(--light), var(--light) 1em, rgba(0, 0, 0, 0) 1em);
+  }
+  60%, 80% {
+    background-image: none;
+  }
+  /**/
+  0%, 80% {
+    border-bottom: .055em solid var(--light);
+    border-top: .055em solid var(--light);
+  }
+  /**/
+  0%, 59% {
+    border-left: none;
+    border-right: none;
+  }
+  60% {
+    border-left: 1em solid var(--light);
+    border-right: 1em solid var(--light);
+  }
+  80% {
+    border-left: .055em solid var(--light);
+    border-right: .055em solid var(--light);
+  }
+  /**/
+  0%, 80% {
+    bottom: 0;
+    top: 0;
+  }
+  /**/
+  0%, 59% {
+    left: 50%;
+  }
+  60%, 80% {
+    left: 0;
+  }
+  /**/
+  0% {
+    right: 50%;
+  }
+  60%, 80% {
+    right: 0;
+  }
+}
+
+@keyframes ZANNClosetRightOn {
+  0%, 59% {
+    background: linear-gradient(90deg, var(--light), var(--light) 1em, rgba(0, 0, 0, 0) 1em);
+  }
+  60%, 80% {
+    background: none;
+  }
+  /**/
+  0%, 80% {
+    border-bottom: .055em solid var(--light);
+    border-top: .055em solid var(--light);
+  }
+  /**/
+  0%, 80% {
+    bottom: 0;
+    top: 0;
+  }
+  /**/
+  0% {
+    left: 50%;
+  }
+  60%, 80% {
+    left: 0;
+  }
+  /**/
+  0%, 59% {
+    right: 50%;
+  }
+  60%, 80% {
+    right: 0;
+  }
+}

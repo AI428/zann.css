@@ -1,0 +1,48 @@
+.zann-scan--on {
+  & {
+    animation-name: ZANNScanOn;
+  }
+  &>:not(.zann) {
+    animation-name: ZANNScanChildOn;
+  }
+  /** prior */
+  &::before {
+    animation-name: ZANNScanLeftOn;
+  }
+}
+
+@keyframes ZANNScanOn {
+  0%, 75% {
+    @apply --theme-skeleton;
+  }
+}
+
+@keyframes ZANNScanChildOn {
+  0%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes ZANNScanLeftOn {
+  0%, 75% {
+    background: var(--light);
+  }
+  /**/
+  0%, 50% {
+    bottom: 48%;
+    top: 48%;
+  }
+  75% {
+    bottom: 0;
+    top: 0;
+  }
+  /**/
+  0% {
+    left: 50%;
+    right: 50%;
+  }
+  50%, 75% {
+    left: 0;
+    right: 0;
+  }
+}

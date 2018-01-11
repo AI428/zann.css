@@ -1,0 +1,38 @@
+{
+  "author": "AI428",
+  "bugs": {
+    "url": "https://github.com/AI428/zann.css/issues"
+  },
+  "description": "A collection of afterimage effects in CSS animation",
+  "devDependencies": {
+    "clean-css": "^4.1.9",
+    "clean-css-cli": "^4.1.10",
+    "npm-run-all": "^4.1.2",
+    "postcss": "^6.0.14",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0"
+  },
+  "keywords": [
+    "afterimage",
+    "animation",
+    "collection",
+    "css",
+    "cssnext",
+    "zann"
+  ],
+  "license": "MIT",
+  "main": "dist/zann.css",
+  "name": "zann.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AI428/zann.css.git"
+  },
+  "scripts": {
+    "css": "npm-run-all --parallel css-compile* --sequential css-minify",
+    "css-compile": "postcss --config postcss.config.js src/index.css --output dist/zann.css",
+    "css-compile-docs": "postcss --config postcss.config.js src/index.css --output docs/zann.css",
+    "css-minify": "cleancss --level 1 --output dist/zann.min.css --source-map dist/zann.css"
+  },
+  "version": "0.1.0"
+}

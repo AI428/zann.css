@@ -1,0 +1,58 @@
+.zann-ripple-back--off {
+  & {
+    animation-name: ZANNRippleBackOff;
+  }
+  &>:not(.zann) {
+    animation-name: ZANNRippleBackChildOff;
+  }
+  /** prior */
+  &::before {
+    animation-name: ZANNRippleBackLeftOff;
+  }
+}
+
+@keyframes ZANNRippleBackOff {
+  100% {
+    @apply --theme-skeleton;
+  }
+}
+
+@keyframes ZANNRippleBackChildOff {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ZANNRippleBackLeftOff {
+  50% {
+    background: color(var(--light) a(.1));
+  }
+  75% {
+    background: none;
+  }
+  /**/
+  25% {
+    border: .055em solid var(--light);
+  }
+  50% {
+    border: 0 solid var(--light);
+  }
+  /**/
+  0%, 75% {
+    left: 50%;
+    top: 50%;
+  }
+  /**/
+  0% {
+    padding-left: 50%;
+    padding-top: 50%;
+  }
+  50%, 75% {
+    padding-left: 100%;
+    padding-top: 100%;
+  }
+  /**/
+  0%, 75% {
+    transform: translate3d(-50%, -50%, 0) rotateZ(45deg);
+  }
+}

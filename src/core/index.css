@@ -1,0 +1,29 @@
+:root {
+  /** KARIYSASU */
+  --light: color(#eed67e a(.89));
+}
+
+:root {
+  --theme-skeleton {
+    background: none;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    outline-color: rgba(0, 0, 0, 0);
+    text-shadow: none;
+  }
+}
+
+.zann {
+  position: relative;
+  &, &::after, &::before, &>* {
+    animation: .8s ease 0s both;
+  }
+  &::after, &::before {
+    box-sizing: border-box;
+    content: '';
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,95 @@
+.zann-scramble--on {
+  & {
+    animation-name: ZANNScrambleOn;
+  }
+  &>:not(.zann) {
+    animation-name: ZANNScrambleChildOn;
+  }
+  /** prior */
+  &::after {
+    animation-name: ZANNScrambleRightOn;
+  }
+  &::before {
+    animation-name: ZANNScrambleLeftOn;
+  }
+}
+
+@keyframes ZANNScrambleOn {
+  0%, 60% {
+    @apply --theme-skeleton;
+  }
+}
+
+@keyframes ZANNScrambleChildOn {
+  0%, 60% {
+    opacity: 0;
+  }
+}
+
+@keyframes ZANNScrambleLeftOn {
+  20%, 80% {
+    background: var(--light);
+  }
+  /**/
+  0%, 40% {
+    bottom: 0;
+  }
+  60%, 80% {
+    bottom: 96%;
+  }
+  /**/
+  0% {
+    left: 50%
+  }
+  30%, 80% {
+    left: 0;
+  }
+  /**/
+  0%, 20% {
+    right: 50%;
+  }
+  40%, 60% {
+    right: 96%;
+  }
+  80% {
+    right: 0;
+  }
+  /**/
+  0%, 80% {
+    top: 0;
+  }
+}
+
+@keyframes ZANNScrambleRightOn {
+  20%, 80% {
+    background: var(--light);
+  }
+  /**/
+  0%, 80% {
+    bottom: 0;
+  }
+  /**/
+  0%, 20% {
+    left: 50%;
+  }
+  40%, 60% {
+    left: 96%;
+  }
+  80% {
+    left: 0;
+  }
+  /**/
+  0% {
+    right: 50%;
+  }
+  30%, 80% {
+    right: 0;
+  }
+  /**/
+  0%, 40% {
+    top: 0;
+  }
+  60%, 80% {
+    top: 96%;
+  }
+}

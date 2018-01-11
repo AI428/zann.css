@@ -1,0 +1,15 @@
+/*!
+* ZANN 0.1.0
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* (c) 2018, AI428
+*/
+
+@import url('./core/index.css');
+@import url('./closet/index.css');
+@import url('./edge/index.css');
+@import url('./ripple/index.css');
+@import url('./scan/index.css');
+@import url('./scramble/index.css');
+@import url('./slide/index.css');
+@import url('./wipe/index.css');

@@ -1,0 +1,264 @@
+/*
+* flow 0.1.0
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* (c) 2018, AI428
+*/
+
+:focus {
+  outline: none;
+}
+
+a {
+  color: #68624e;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease;
+  white-space: nowrap
+}
+
+a:hover {
+  opacity: .55;
+}
+
+a:active {
+  opacity: 1;
+}
+
+body, html {
+  color: #313131;
+  font-family: 'Roboto', 'Yu Gothic', sans-serif;
+  font-size: 18px;
+  line-height: 1.618;
+}
+
+@media screen and (max-width: 640px) {
+
+  body, html {
+    font-size: 12px;
+  }
+}
+
+code {
+  border: 0;
+  overflow-x: auto;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 4.236em;
+}
+
+h2 {
+  font-size: 2.618em;
+}
+
+h3 {
+  font-size: 1.618em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: .618em;
+}
+
+h6 {
+  font-size: .236em;
+}
+
+hr {
+  background: rgba(28, 28, 28, 0.13);
+  border: none;
+  border-radius: 50%;
+  height: 1px;
+  margin: .618em 0;
+}
+
+input, select {
+  background: none;
+  border: 1px solid #c0c0c0;
+  border-radius: 3px;
+  height: 2.618em;
+  vertical-align: middle
+}
+
+input:focus, select:focus {
+  -webkit-box-shadow: inset 0 0 2px rgba(74, 59, 42, 0.13), 0 0 2px rgba(74, 59, 42, 0.13);
+          box-shadow: inset 0 0 2px rgba(74, 59, 42, 0.13), 0 0 2px rgba(74, 59, 42, 0.13);
+}
+
+input {
+  padding: 0 1.618em;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease
+}
+
+input:hover {
+  opacity: .55;
+}
+
+input {/*
+* prior
+*/
+}
+
+input:active {
+  opacity: 1;
+}
+
+mark {
+  background-color: rgba(147, 132, 139, 0.13);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px rgba(28, 28, 28, 0.13);
+          box-shadow: 0 0 2px rgba(28, 28, 28, 0.13);
+  padding: 0 .618em;
+}
+
+p {
+  color: #696969;
+}
+
+select {
+  padding: 0 .618em;
+}
+
+small {
+  font-size: .618em;
+}
+
+strong {
+  border-bottom: 1px solid rgba(28, 28, 28, 0.13);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.box--emboss {
+  -webkit-box-shadow: 1px 1px 3px rgba(28, 28, 28, 0.13);
+          box-shadow: 1px 1px 3px rgba(28, 28, 28, 0.13);
+}
+
+.button {
+  background-color: rgba(253, 149, 30, 0.89);
+  border: none;
+  border-radius: 3px;
+  height: 2.618em;
+  padding: 0 1.618em;
+  -webkit-transition: opacity .2s ease;
+  transition: opacity .2s ease
+}
+
+.button:hover {
+  opacity: .55;
+}
+
+.button {/*
+* prior
+*/
+}
+
+.button:active {
+  opacity: 1;
+}
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  padding: 1.618em;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.column, .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.column.content--among, .row.content--among {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.column.content--around, .row.content--around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.column.content--center, .row.content--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.column.content--evenly, .row.content--evenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.column.items--center, .row.items--center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.column.items--end, .row.items--end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.column.items--start, .row.items--start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.column.split--2>*, .row.split--2>* {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.column.split--3>*, .row.split--3>* {
+  -ms-flex-preferred-size: 33.33333%;
+      flex-basis: 33.33333%;
+}
+
+.column.wrap, .row.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--end {
+  text-align: right;
+}
+
+.text--start {
+  text-align: left;
+}

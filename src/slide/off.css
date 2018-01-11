@@ -1,0 +1,12 @@
+.zann-slide--off {
+  animation-name: ZANNSlideOff;
+}
+
+@keyframes ZANNSlideOff {
+  50%, 100% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(5%, 0, 0);
+  }
+}
