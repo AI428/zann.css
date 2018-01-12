@@ -35,5 +35,5 @@
     "css-compile-docs": "postcss --config postcss.config.js src/index.css --output docs/zann.css",
     "css-minify": "cleancss --level 1 --output dist/zann.min.css --source-map dist/zann.css"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
