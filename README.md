@@ -61,7 +61,7 @@ Combined with UI framework like Vue.js, it is more effective. For basic usage of
 
 ```html
 <!--
-This is an example of turning on / off closet effect when clicked. try it.
+This is an example of turning on / off closet effect when clicked. Try it.
 -->
 <div id="app" @click="isActive = !isActive">
   <div class="zann" :class="{ 'zann-closet--on': isActive, 'zann-closet--off': !isActive }"></div>
@@ -78,7 +78,7 @@ new Vue({
 </script>
 ```
 
-This is an example of turning on / off closet effect when clicked. try it.
+This is an example of turning on / off closet effect when clicked. Try it.
 
 ## LICENSE
 

@@ -19,7 +19,8 @@
     "collection",
     "css",
     "cssnext",
-    "zann"
+    "effects",
+    "html"
   ],
   "license": "MIT",
   "main": "dist/zann.css",
