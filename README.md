@@ -1,5 +1,7 @@
 # ZANN
 
+[![npm version](https://badge.fury.io/js/zann.css.png)](https://badge.fury.io/js/zann.css)
+
 > _A collection of afterimage effects in CSS animation_
 
 The afterimage effect impresses viewers. The user is exposed to a lot of content, it can not separate important content from other, it is confused every day. This collection exists to make the content that you want to convey more attractive.
@@ -23,7 +25,7 @@ Insert link to your website files, and set the `zann.css` reference.
 In the case of using CDN hosted.
 
 ```html
-<link rel="stylesheet" href="https://unpkg/zann.css">
+<link rel="stylesheet" href="https://unpkg.com/zann.css">
 ```
 
 Just add CSS classes to the element on your website files.
@@ -51,6 +53,8 @@ Modifier | Description
 - zann-slide-back
 - zann-wipe
 
+Please check the behavior on the [demo](https://ai428.github.io/zann.css/) site.
+
 ### With VUE.JS
 
 Combined with UI framework like Vue.js, it is more effective. For basic usage of Vue.js, please refer to the wonderful [document](https://jp.vuejs.org/) of the head family.
@@ -63,7 +67,7 @@ This is an example of turning on / off closet effect when clicked. try it.
   <div class="zann" :class="{ 'zann-closet--on': isActive, 'zann-closet--off': !isActive }"></div>
 </div>
 
-<script src="https://unpkg/vue"></script>
+<script src="https://unpkg.com/vue"></script>
 <script>
 new Vue({
   el: '#app',
@@ -73,6 +77,8 @@ new Vue({
 });
 </script>
 ```
+
+This is an example of turning on / off closet effect when clicked. try it.
 
 ## LICENSE
 

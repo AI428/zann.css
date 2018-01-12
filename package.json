@@ -1,7 +1,7 @@
 {
-  "author": "AI428",
+  "author": "ai428",
   "bugs": {
-    "url": "https://github.com/AI428/zann.css/issues"
+    "url": "https://github.com/ai428/zann.css/issues"
   },
   "description": "A collection of afterimage effects in CSS animation",
   "devDependencies": {
@@ -26,7 +26,7 @@
   "name": "zann.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AI428/zann.css.git"
+    "url": "git+https://github.com/ai428/zann.css.git"
   },
   "scripts": {
     "css": "npm-run-all --parallel css-compile* --sequential css-minify",
